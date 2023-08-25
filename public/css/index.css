@@ -1,0 +1,201 @@
+
+/* Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Ubuntu Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* Edu QLD Beginner */
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;500;600;700&display=swap');
+
+/******************************** DEFAULT **********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+body {
+    background: linear-gradient(0.4turn, rgb(9, 109, 162), rgb(99, 241, 191) 110%);
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 1rem 0.5rem;
+}
+
+p, li, a, input, button, label, span {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    fill: white;
+    height: 1.25em;
+    width: 1.25em;
+}
+
+svg:hover {
+    fill: rgb(99, 241, 191);
+}
+
+/***************************************************************************/
+/****************************** Custom CSS *********************************/
+
+.header {
+    text-align: left;
+    padding: 5vh 6vw 7vh;
+}
+
+.header h1 {
+    color: #ffffff88;
+    font-size: 5rem;
+    font-family: 'Edu QLD Beginner', cursive;
+} 
+
+.custom-row {
+    padding: 0 5vw;
+    width: 100vw;
+    min-height: 65vh;
+}
+
+.custom-column {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 5vh 0;
+}
+
+.content-container {
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    margin: 3vh auto 1.5vh;
+    padding: 2vh 1vw;
+    transition-duration: 500ms;
+    flex-grow: 1;
+}
+
+.content-container:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-duration: 500ms;
+}
+
+.content-container h1 {
+    color: rgb(99, 241, 191);
+}
+
+.content-container ul {
+    list-style-type: none;
+    font-size: 1.17rem;
+    padding: 0;
+}
+
+.content-container ul li input{
+    font-size: 1.35rem;
+    color: #ffffff;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-duration: 500ms;
+}
+
+.custom-checkbox:checked {
+    border-color: rgb(99, 241, 191);
+    background-color: rgb(99, 241, 191);
+}
+
+.custom-checkbox:focus {
+    outline: 5px solid rgba(99, 241, 191, 0.2);
+}
+
+span:has(> .custom-checkbox:checked) + input:disabled {
+    text-decoration: line-through;
+    color: #ffffff88;
+}
+
+.add-task-form-btn {
+    position: fixed;
+    right: 5vh;
+    bottom: 5vh;
+    z-index: 1;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    width: 90px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+
+    font-size: 4rem;
+    border: none;
+
+    transition-duration: 500ms; 
+}
+
+.add-task-form-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition-duration: 500ms;
+}
+
+.add-task-form-btn a {
+    color: rgb(9, 109, 162);
+    text-align: center;
+    
+    width: 100%;
+
+    padding: 0 0 5px;
+}
+
+/***************************************************************************/
+/****************************** FOOTER *************************************/
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.foot-text {  
+    padding: 1vh 5vw;
+    margin: 5vh 0 0;
+}
+
+.foot-text h6 {
+    margin: 1vh 0;
+    font-size: 1rem !important;
+}
+
+/***************************************************************************/

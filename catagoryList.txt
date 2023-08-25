@@ -1,0 +1,1 @@
+{"catagoryName":"eYRC","taskList":[{"inputId":"eYRCTask1","inputValue":"Do User Profile submission"},{"inputId":"eYRCTask2","inputValue":"Make the team do user profile submission"},{"inputId":"eYRCTask3","inputValue":"Themes preferencing"}]}

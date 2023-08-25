@@ -1,0 +1,109 @@
+/* Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Ubuntu Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* Edu QLD Beginner */
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;500;600;700&display=swap');
+
+/******************************** DEFAULT **********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+body {
+    background: linear-gradient(0.4turn, rgb(9, 109, 162), rgb(99, 241, 191) 110%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+p, li, a, input, button, span {
+    font-family: 'Space Grotesk', sans-serif !important;
+    margin: 0.5rem 0;
+}
+
+/***************************************************************************/
+/****************************** Custom CSS *********************************/
+
+.main {
+    text-align: center;
+    padding: 5vh 20vw 7vh;
+    min-height: 100vh;
+}
+
+.main legend {
+    color: #ffffff88;
+    font-size: 5rem;
+    font-family: 'Edu QLD Beginner', cursive;
+}
+
+.custom-button {
+    background-color: rgb(99, 241, 191);
+    border-color: rgb(99, 241, 191);
+    border-width: 2px;
+    color: rgb(9, 109, 100);
+}
+
+.custom-button:hover {
+    background-color: rgb(9, 109, 162);
+    border-color: rgb(99, 241, 250);
+    color:rgb(99, 241, 250);
+}
+
+.custom-button:active {
+    background-color: rgb(9, 109, 110) !important;
+    border-color: rgb(99, 241, 191) !important;
+    color: rgb(99, 241, 191) !important;
+}
+
+.custom-plus-button {
+    font-size: 2.25rem !important;
+    width: 55px !important;
+    height: 55px !important;
+
+    position: relative;
+    bottom: 3.2rem;
+}
+
+.custom-alert {
+    height: 50px;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.custom-alert svg {
+    width: 10%;
+    transform: scale(0.4);
+}
+/***************************************************************************/
+/****************************** Media Queries ******************************/
+
+@media only screen and (max-width: 1200px) {
+    .main {
+        padding: 5vh 12vw 7vh;
+    }
+}
+
+/***************************************************************************/
+/******************************* JS Styles *********************************/
+
+.striked-text {
+    text-decoration: line-through;
+    color: rgb(99, 241, 191);
+}
+
+/***************************************************************************/
