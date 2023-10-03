@@ -4,3 +4,8 @@
     functions = "functions/"
     command = "npm run build"
     timeout = 180
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
