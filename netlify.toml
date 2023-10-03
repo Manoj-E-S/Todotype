@@ -3,3 +3,4 @@
     publish = "public/"
     functions = "functions/"
     command = "node functions/server.js"
+    timeout = 180
