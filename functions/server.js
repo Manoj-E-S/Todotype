@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Custom Modules
-const utilityFunctions = require(path.join(__dirname, '/serverModules/utilityFunctions'));
+const utilityFunctions = require(path.join(__dirname, '/utilityFunctions'));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -30,15 +30,15 @@ var submitRouteCaller = '';
 
 /////////////////////////////////////////////////////////////////////////////////////////////////// Middleware //
 
-//bodyParser middleware
+// bodyParser middleware
 app.use(bodyParser.urlencoded({extended: true}));
 
-//static files
-app.use(express.static(__dirname + '/public'));
+// static files
+// app.use(express.static(__dirname + '/public'));
 
-//view engine
+// view engine
 app.set('view engine','ejs');
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname, '../functions', 'views'));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -215,5 +215,21 @@ app.post('/finalizeEdit', function (req, res) {
 app.listen(PORT, function () {
     console.log(`Server is running on Port ${PORT}`);
 });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////// For netlify deployment //
+
+const awsServerlessExpress = require('aws-serverless-express');
+
+const server = awsServerlessExpress.createServer(app);
+
+// NOTE: No need to serve static files using express.static
+
+// export.handlers for netlify:
+exports.handler = (event, context) => {
+    awsServerlessExpress.proxy(server, event, context);
+};
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
