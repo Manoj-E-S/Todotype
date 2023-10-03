@@ -10,6 +10,9 @@
   },
   "author": "Manoj Embar Suresh",
   "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
