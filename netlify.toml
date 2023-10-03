@@ -2,4 +2,4 @@
     base = "/"
     publish = "public"
     functions = "/functions"
-    command = "node server.js"
+    command = "node functions/server.js"
