@@ -2,5 +2,5 @@
     base = "/"
     publish = "public/"
     functions = "functions/"
-    command = "node functions/server.js"
+    command = "npm run build"
     timeout = 180
