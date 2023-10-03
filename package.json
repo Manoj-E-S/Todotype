@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node functions/server.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --mode production"
   },
   "author": "Manoj Embar Suresh",
   "license": "ISC",
