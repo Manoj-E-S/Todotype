@@ -1,6 +1,5 @@
 [build]
     base = "/"
-    publish = "/public"
+    publish = "public"
     functions = "/functions"
     command = "node server.js"
-    publish = "public"
