@@ -55,7 +55,7 @@ const checkAndUpdateCatagoryList = utilityFunctions.checkAndUpdateCatagoryList;
 /////////////////////////////////////////////////////////////////////////////////////////////////// Get Routes //
 
 // Home Page
-app.get('/', function (req, res) {
+app.get('/start', function (req, res) {
     let today = grabDay();
     let catagoryList = grabCatagories();
     res.render('index', {day: today, taskList: tasks, catagoryList: catagoryList});
@@ -122,7 +122,7 @@ app.post('/submitCatagory', function (req, res) {
     if(error === 0) {
         count = 0;
         catagory = "";
-        res.redirect('/');
+        res.redirect('/start');
     } else if(error === 1) {
         error = {
             code: 1, 
@@ -166,7 +166,7 @@ app.post('/deleteCatagory', function (req, res) {
         console.log(`File (ID:${file}) closed!`);
     });
 
-    res.redirect('/');
+    res.redirect('/start');
 });
 
 // Edit Catagory
@@ -191,7 +191,7 @@ app.post('/finalizeEdit', function (req, res) {
     if(error === 0) {
         count = 0;
         catagory = "";
-        res.redirect('/');
+        res.redirect('/start');
     } else if(error === 2) {
         error = {
             code: 2,
