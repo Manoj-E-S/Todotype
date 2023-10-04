@@ -6,6 +6,6 @@
     timeout = 180
 
 [[redirects]]
-    from = "/*"
-    to = "/index.html"
+    from = "/"
+    to = "/functions/server"
     status = 200
